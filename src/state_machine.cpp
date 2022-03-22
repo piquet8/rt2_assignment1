@@ -29,8 +29,10 @@ int main(int argc, char **argv)
    ros::NodeHandle n;
    ros::ServiceServer service= n.advertiseService("/user_interface", user_interface);
    ros::ServiceClient client_rp = n.serviceClient<rt2_assignment1::RandomPosition>("/position_server");
+   //define the action client
    actionlib::SimpleActionClient<rt2_assignment1::ReachGoalAction> ac("go_to_point", true);
    rt2_assignment1::RandomPosition rp;
+   //a goal message is created
    rt2_assignment1::ReachGoalGoal goal;
    
    rp.request.x_max = 5.0;
@@ -44,13 +46,18 @@ int main(int argc, char **argv)
    	if (start){
    		client_rp.call(rp);
    		ROS_INFO("Waiting for action server to start....");
-   		ac.waitForServer();
+   		//wait for the action server to start before continuing
+        ac.waitForServer();
    		
    		goal.x = rp.response.x;
    		goal.y = rp.response.y;
    		goal.theta = rp.response.theta;
    		std::cout << "\nGoing to the position: x= " << goal.x << " y= " << goal.y << " theta = " << goal.theta << std::endl;
    	ac.sendGoal(goal);
+        
+        //the action client waits for the goal to finish before continuing, the timeout is set
+        //to 100 seconds, this means that after 100 seconds the function will return with false
+        //if the goal has not finished
    		bool finished_before_timeout = ac.waitForResult(ros::Duration(100.0));
    		
    		if (finished_before_timeout)
