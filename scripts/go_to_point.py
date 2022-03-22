@@ -1,12 +1,15 @@
 #! /usr/bin/env python
 
+# this line imports the generated messages, the action specification generats several messages
 import rt2_assignment1.msg
+
 import rospy
 from geometry_msgs.msg import Twist, Point
 from nav_msgs.msg import Odometry
 from tf import transformations
 from rt2_assignment1.srv import Position
 import math
+# imports the actionlib library used for implementing simple actions
 import actionlib
 
 # robot state variables
@@ -50,17 +53,18 @@ class ReachGoalAction(object):
 
 	def __init__(self,name):
 		self._action_name = name
+		# here a simple action server is created
 		self._as = actionlib.SimpleActionServer(self._action_name, rt2_assignment1.msg.ReachGoalAction,execute_cb=self.execute_cb,auto_start=False)
 		self._as.start()
 	
+	# this is the execute callback function that we'll run everytime a new goal is received
 	def execute_cb(self,goal):
 		global position_, yaw_precision_, yaw_, state_, pub_
- 	       # helper variables
+ 	       
 		r = rospy.Rate(1)
- 	       # boolean variable initialisation
 		success = True
         
- 	       # initialising feedback fields
+ 	       # initialising feedback
 		self._feedback.up_x = position_.x
 		self._feedback.up_y = position_.y
 		self._feedback.up_theta = yaw_
@@ -99,7 +103,7 @@ class ReachGoalAction(object):
 	def change_state(self,state):
     		global state_
     		state_ = state
-    		print ('State changed to [%s]' % state_)
+    		print ('State changed: [%s]' % state_)
 
 
 	def normalize_angle(self,angle):
