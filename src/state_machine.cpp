@@ -55,7 +55,8 @@ int main(int argc, char **argv)
    		std::cout << "\nGoing to the position: x= " << goal.x << " y= " << goal.y << " theta = " << goal.theta << std::endl;
    	ac.sendGoal(goal);
         
-        //the action client waits for the goal to finish before continuing, the timeout is set to 100 seconds, this means that after 100 seconds the function will return with false if the goal has not finished
+        //the action client waits for the goal to finish before continuing, the timeout is set to 100 seconds, this means that after 100 seconds 
+        //the function will return with false if the goal has not finished
    		bool finished_before_timeout = ac.waitForResult(ros::Duration(100.0));
    		
    		if (finished_before_timeout)
