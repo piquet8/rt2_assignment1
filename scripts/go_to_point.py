@@ -125,7 +125,6 @@ class ReachGoalAction(object):
     		pub_.publish(twist_msg)
     # state change conditions
     		if math.fabs(err_yaw) <= yaw_precision_2_:
-        #print ('Yaw error: [%s]' % err_yaw)
         		self.change_state(1)
 
 
@@ -144,12 +143,9 @@ class ReachGoalAction(object):
 		        twist_msg.angular.z = kp_a*err_yaw
 		        pub_.publish(twist_msg)
    		else:
-
-        #print ('Position error: [%s]' % err_pos)
         		self.change_state(2)
     # state change conditions
    		if math.fabs(err_yaw) > yaw_precision_:
-        #print ('Yaw error: [%s]' % err_yaw)
         		self.change_state(0)
         		
 
@@ -166,7 +162,6 @@ class ReachGoalAction(object):
     		pub_.publish(twist_msg)
     	# state change conditions
     		if math.fabs(err_yaw) <= yaw_precision_2_:
-        #print ('Yaw error: [%s]' % err_yaw)
         		self.change_state(3)
         
 	def done(self):
@@ -174,6 +169,7 @@ class ReachGoalAction(object):
     		twist_msg.linear.x = 0
     		twist_msg.angular.z = 0
     		pub_.publish(twist_msg)
+		# once the action is done, the action server notifies the action client that the goal is complete by callung set_succeeded
     		self._result.ok = True
     		rospy.loginfo('Position Reached')
     		self._as.set_succeeded(self._result)
@@ -181,6 +177,7 @@ class ReachGoalAction(object):
 def main():
     global pub_
     rospy.init_node('go_to_point')
+    #creates the action server
     action_server = ReachGoalAction('go_to_point')
     pub_ = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
     sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
