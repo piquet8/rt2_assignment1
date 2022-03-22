@@ -48,7 +48,7 @@ int main(int argc, char **argv)
    		goal.theta = rp.response.theta;
    		std::cout << "\nGoing to the position: x= " << goal.x << " y= " << goal.y << " theta = " << goal.theta << std::endl;
    	ac.sendGoal(goal);
-   		bool finished_before_timeout = ac.waitForResult(ros::Duration(120.0));
+   		bool finished_before_timeout = ac.waitForResult(ros::Duration(100.0));
    		
    		if (finished_before_timeout)
    		{
