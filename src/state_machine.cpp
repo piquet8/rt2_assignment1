@@ -1,9 +1,12 @@
 #include "ros/ros.h"
 #include "rt2_assignment1/Command.h"
 #include "rt2_assignment1/RandomPosition.h"
+
 // action library used from implementing simple actions
 #include <actionlib/client/simple_action_client.h>
+//defines the possible goal states
 #include <actionlib/client/terminal_state.h>
+//include action messages generated from ReachGoal action
 #include <rt2_assignment1/ReachGoalAction.h>
 
 
