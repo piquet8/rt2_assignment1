@@ -40,7 +40,7 @@ int main(int argc, char **argv)
    	ros::spinOnce();
    	if (start){
    		client_rp.call(rp);
-   		ROS_INFO("Waiting for action server to start..");
+   		ROS_INFO("Waiting for action server to start....");
    		ac.waitForServer();
    		
    		goal.x = rp.response.x;
@@ -52,10 +52,10 @@ int main(int argc, char **argv)
    		
    		if (finished_before_timeout)
    		{
-   			ROS_INFO("Position Reached");
+   			ROS_INFO("ACTION FINISHED: Position Reached");
    		}
    		else
-   			ROS_INFO("Action didn't finish before the time out");
+   			ROS_INFO("ACTION DOESN'T FINISHED: the time is over");
    	}
    }
    return 0;
