@@ -1,0 +1,9 @@
+float32 x
+float32 y
+float32 theta
+---
+bool ok
+---
+float32 up_x
+float32 up_y
+float32 up_theta
