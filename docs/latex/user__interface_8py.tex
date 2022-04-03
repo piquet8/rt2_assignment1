@@ -1,0 +1,65 @@
+\hypertarget{user__interface_8py}{}\doxysection{scripts/user\+\_\+interface.py File Reference}
+\label{user__interface_8py}\index{scripts/user\_interface.py@{scripts/user\_interface.py}}
+
+
+This node implements an user interface for the communication with the costumer.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{user__interface_8py_ac26bdb296b6776907b72c17ce5a1b24a}{user\+\_\+interface.\+main}} ()
+\begin{DoxyCompactList}\small\item\em This is the main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node implements an user interface for the communication with the costumer. 
+
+\begin{DoxyAuthor}{Author}
+Gianluca Piquet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03/04/2022
+\end{DoxyDate}
+Subsribes to\+: ~\newline
+ \mbox{[}None\mbox{]}
+
+Publishes to\+: ~\newline
+ /cmd\+\_\+vel
+
+Clients\+: ~\newline
+ /position\+\_\+server
+
+Services\+: ~\newline
+ /user\+\_\+interface
+
+Action Client\+: ~\newline
+ /go\+\_\+to\+\_\+point
+
+Description\+: ~\newline
+
+
+This node implements the user interface, the user is prompted as input to enter 1 if they want to start the robot and 0 if they want to stop it. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{user__interface_8py_ac26bdb296b6776907b72c17ce5a1b24a}\label{user__interface_8py_ac26bdb296b6776907b72c17ce5a1b24a}} 
+\index{user\_interface.py@{user\_interface.py}!main@{main}}
+\index{main@{main}!user\_interface.py@{user\_interface.py}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def user\+\_\+interface.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This is the main function. 
+
+ui\+\_\+client\+: implements the service client of user\+\_\+interface type that has as argument the Command service \#to start/stop robot behaviours according to user\textquotesingle{}s control ~\newline
+
+
+client\+: implements the action client of the go\+\_\+to\+\_\+point Action and has as argument the message of type \#\+Reach\+Goal action that we can find in the rt2assignment1 package
+
+pub\+: it\textquotesingle{}s the publsiher variable of the cmd\+\_\+vel, it publishes a twist message to stop the robot setting \#the velocities equal to zero.
+
+x\+: stores the input value of the user 
