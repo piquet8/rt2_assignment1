@@ -1,0 +1,110 @@
+\hypertarget{state__machine_8cpp}{}\doxysection{src/state\+\_\+machine.cpp File Reference}
+\label{state__machine_8cpp}\index{src/state\_machine.cpp@{src/state\_machine.cpp}}
+
+
+This node implements the state machine.  
+
+
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Random\+Position.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$actionlib/client/simple\+\_\+action\+\_\+client.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/terminal\+\_\+state.\+h$>$}\newline
+{\ttfamily \#include $<$rt2\+\_\+assignment1/\+Reach\+Goal\+Action.\+h$>$}\newline
+Include dependency graph for state\+\_\+machine.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state__machine_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}{user\+\_\+interface}} (rt2\+\_\+assignment1\+::\+Command\+::\+Request \&req, rt2\+\_\+assignment1\+::\+Command\+::\+Response \&res)
+\begin{DoxyCompactList}\small\item\em This function implents the callback of the service /user\+\_\+interface for the server. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em This is the main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}\label{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}} 
+bool {\bfseries start} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node implements the state machine. 
+
+\begin{DoxyAuthor}{Author}
+Gianluca Piquet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03/04/2022
+\end{DoxyDate}
+Subsribes to\+: ~\newline
+ \mbox{[}None\mbox{]}
+
+Publishes to\+: ~\newline
+ \mbox{[}None\mbox{]}
+
+Clients\+: ~\newline
+ /position\+\_\+server
+
+Services\+: ~\newline
+ /user\+\_\+interface
+
+Action Client\+: ~\newline
+ /go\+\_\+to\+\_\+point
+
+Description\+: ~\newline
+
+
+In this node we have\+: communication with the user interface, which allows the movement of the robot to be triggered if the user enters the value 1 using a Boolean value; communication as a request to the position\+\_\+service node of a random position to be reached by the robot; communication of the target position to the action server and waiting to receive this position 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{state\_machine.cpp@{state\_machine.cpp}!main@{main}}
+\index{main@{main}!state\_machine.cpp@{state\_machine.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+This is the main function. 
+
+\begin{DoxyReturn}{Returns}
+the value 0
+\end{DoxyReturn}
+In this function it\textquotesingle{}s implemented\+:
+\begin{DoxyEnumerate}
+\item the node \textquotesingle{}state machine\textquotesingle{}
+\item the service for the /user\+\_\+interface
+\item the client for the /position\+\_\+server
+\item the action client for the \mbox{\hyperlink{namespacego__to__point}{go\+\_\+to\+\_\+point}}
+\item the custom messages Random\+Position
+\item the custom messages Reach\+Goal\+Goal
+\end{DoxyEnumerate}
+
+When the start variable is set to True, the Random\+Position service is called and we wait for the action server to start. Once started, the goal is set with the ranodm position that was received and sent to the action server. Finally, a timer checks whether the action is finished or not. \mbox{\Hypertarget{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}\label{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}} 
+\index{state\_machine.cpp@{state\_machine.cpp}!user\_interface@{user\_interface}}
+\index{user\_interface@{user\_interface}!state\_machine.cpp@{state\_machine.cpp}}
+\doxysubsubsection{\texorpdfstring{user\_interface()}{user\_interface()}}
+{\footnotesize\ttfamily bool user\+\_\+interface (\begin{DoxyParamCaption}\item[{rt2\+\_\+assignment1\+::\+Command\+::\+Request \&}]{req,  }\item[{rt2\+\_\+assignment1\+::\+Command\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+
+
+This function implents the callback of the service /user\+\_\+interface for the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & is the request received from the client of the user\+\_\+interface.\+py the field command in the srv file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean value
+\end{DoxyReturn}
+This function is used to manage the value of the variable start\+: start is initialised to True if the command received consists of a string \textquotesingle{}start\textquotesingle{}, otherwise it is initialised to False 
