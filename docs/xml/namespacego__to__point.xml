@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacego__to__point" kind="namespace" language="Python">
+    <compoundname>go_to_point</compoundname>
+    <innerclass refid="classgo__to__point_1_1_reach_goal_action" prot="public">go_to_point::ReachGoalAction</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacego__to__point_1a91dbaab25e6080f6b5dbf82cac6ce75c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>int go_to_point::position_</definition>
+        <argsstring></argsstring>
+        <name>position_</name>
+        <initializer>=  Point()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="36" column="1" bodyfile="scripts/go_to_point.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1ae444f19eb2019982432760ace036ce03" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int go_to_point.yaw_</definition>
+        <argsstring></argsstring>
+        <name>yaw_</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="39" column="1" bodyfile="scripts/go_to_point.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1aa2d0ef255bcf5d5faf9ca2764730fb17" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int go_to_point.state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="45" column="1" bodyfile="scripts/go_to_point.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a57b4090d0abcbcf0bfa2bcb9329d3036" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>go_to_point.pub_</definition>
+        <argsstring></argsstring>
+        <name>pub_</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="48" column="1" bodyfile="scripts/go_to_point.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a67f95834f0959feb3facd17bc7fa2b38" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int go_to_point.yaw_precision_</definition>
+        <argsstring></argsstring>
+        <name>yaw_precision_</name>
+        <initializer>=  math.pi / 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="53" column="1" bodyfile="scripts/go_to_point.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1af74ccf49164d0478ca8343e2031d5813" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int go_to_point.yaw_precision_2_</definition>
+        <argsstring></argsstring>
+        <name>yaw_precision_2_</name>
+        <initializer>=  math.pi / 90</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="56" column="1" bodyfile="scripts/go_to_point.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.dist_precision_</definition>
+        <argsstring></argsstring>
+        <name>dist_precision_</name>
+        <initializer>=  0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="59" column="1" bodyfile="scripts/go_to_point.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a524106fc7667a0927951dfd89d52d6a7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.kp_a</definition>
+        <argsstring></argsstring>
+        <name>kp_a</name>
+        <initializer>=  -3.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="63" column="1" bodyfile="scripts/go_to_point.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a7bc498652ca66932e704e738b50c297b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.kp_d</definition>
+        <argsstring></argsstring>
+        <name>kp_d</name>
+        <initializer>=  0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="64" column="1" bodyfile="scripts/go_to_point.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1acb4e14986fafe5cb73bb8ad0c178869d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.ub_a</definition>
+        <argsstring></argsstring>
+        <name>ub_a</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="65" column="1" bodyfile="scripts/go_to_point.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1afecad4058844db05d8321199e25b4498" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.lb_a</definition>
+        <argsstring></argsstring>
+        <name>lb_a</name>
+        <initializer>=  -0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="66" column="1" bodyfile="scripts/go_to_point.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a16c473b9e717200c483d18e66b48152a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.ub_d</definition>
+        <argsstring></argsstring>
+        <name>ub_d</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="67" column="1" bodyfile="scripts/go_to_point.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacego__to__point_1a36304a9f313b0579f7fc69fa01695524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.clbk_odom</definition>
+        <argsstring>(msg)</argsstring>
+        <name>clbk_odom</name>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Callback: clbk_odom
+
+Args:
+  msg(Twist): data retrived by c,d_vel topic
+Returns:
+  None
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="69" column="1" bodyfile="scripts/go_to_point.py" bodystart="69" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1ab92bd6db1ec323a4d795ed6cb40aebe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Main function
+
+This function initialises all the pub/sub and the server for the :class:&apos;ReachGoalAction&apos;
+
+Args:
+  None
+Returns:
+  None
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/go_to_point.py" line="303" column="1" bodyfile="scripts/go_to_point.py" bodystart="303" bodyend="321"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: go_to_point
+    :platform: Unix
+    :synopsis: Python module for move to robot to the target
+   
+.. moduleauthor:: Gianluca Piquet gianlucapiquet8@gmail.com
+
+This ROS node implements the movement of the robot within the simulation
+
+Subscribes to:
+    /odom topic where the simulator publishes the robot position
+
+Publishes to:
+    /cmd_vel the desired robot position
+
+Service :
+    /go_to_point to start the robot motion</verbatim> </para>
+    </detaileddescription>
+    <location file="scripts/go_to_point.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
