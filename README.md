@@ -9,7 +9,7 @@ In this branch we can also find the scene [coppeliascene.ttt](https://github.com
 ## Packages required
 - [Ros1_bridge](https://github.com/ros2/ros1_bridge) allows the communication among ROS and ROS2 nodes
 - [SimExtRos](https://github.com/CoppeliaRobotics/simExtROS2) is the ROS2 Interface plugin for CoppeliaSiam
-- [Coppeliasim](https://coppeliarobotics.com/downloads) is the simulator that allows to inregrate Vrep with ROS
+- [Coppeliasim](https://www.coppeliarobotics.com/) is the simulator that allows to inregrate Vrep with ROS
 ## Description of the main branch
 ### Scripts folder
 - [user_interface.py](https://github.com/piquet8/rt2_assignment1/blob/main/scripts/user_interface.py) implents the user interface, if the user inserts '1' the robot starts to move instead inserting the value '0' the robot stop
@@ -31,15 +31,21 @@ In this branch we can also find the scene [coppeliascene.ttt](https://github.com
 - [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim.launch) launch file for starting the four nodes and the simulation 
 - [sim2.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim2.launch) Launch file for starting the same things of the [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim.launch) without the *state_machine.cpp* and the *position_service.cpp*. We used this launcher in the interaction between ROS and ROS2.
 - [coppelia.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/coppelia.launch) Launch file for starting the four nodes interacting with Vrep
-
- 
-
-
-
-
-
-To launch the node, please run:
+## How to run
+To launch the simulation, please:
+1. Download Coppeliasim from here https://coppeliarobotics.com/downloads
+2. Launch the ROS master
 ```
-roslaunch rt2_assignment1 sim.launch
+roscore &
 ```
+3. Then in the second shell, to start the Coppelia environment, please run:
+```
+./coppeliasim.sh
+```
+4. Now you can load the scene [coppeliascene.ttt](https://github.com/piquet8/rt2_assignment1/blob/main/coppeliascene.ttt) (Menu bar --> File --> Open Scene)
+6. Now we are ready, open a new terminal and launch
+```
+roslaunch rt2_assignment1 coppelia.launch 
+```
+
 
