@@ -17,7 +17,7 @@ In this branch we can also find the scene [coppeliascene.ttt](https://github.com
 ### Src folder
 - [state_machine.cpp](https://github.com/piquet8/rt2_assignment1/blob/main/src/state_machine.cpp) is implemented as a service server, the activation is meanaged by the start boolean variable retrieved in the `ui_client` by the [user_interface](https://github.com/piquet8/rt2_assignment1/blob/main/scripts/user_interface.py). This node also implements a service client for both: `/go_to_point` and `/position_server`
 - [position_service.cpp](https://github.com/piquet8/rt2_assignment1/blob/main/src/position_service.cpp) is implemented ad a service server node, it replies with a random values for x,y and theta where x and y are found among a certain range of values
-### SRV folder
+### Srv folder
 - [Command.srv](https://github.com/piquet8/rt2_assignment1/blob/main/srv/Command.srv) is composed by:
   - as request a string 
   - as reply a boolean
@@ -31,6 +31,8 @@ In this branch we can also find the scene [coppeliascene.ttt](https://github.com
 - [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim.launch) launch file for starting the four nodes and the simulation 
 - [sim2.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim2.launch) Launch file for starting the same things of the [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim.launch) without the *state_machine.cpp* and the *position_service.cpp*. We used this launcher in the interaction between ROS and ROS2.
 - [coppelia.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/coppelia.launch) Launch file for starting the four nodes interacting with Vrep
+### URDF folder
+Contains the robot description, [my_robot.udf](https://github.com/piquet8/rt2_assignment1/blob/main/urdf/my_robot.urdf) 
 ## How to run
 To launch the simulation, please:
 1. Download Coppeliasim from here https://coppeliarobotics.com/downloads
