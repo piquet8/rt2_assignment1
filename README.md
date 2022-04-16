@@ -11,7 +11,7 @@ The action branch contain the same package of the main branch, but with the go_t
 ### Action folder
 It contains the instruction for defining the expected action. 
 - the `goal` is composed by three flaot32 value represent the target position for the robot (x, y and theta)
-- the `reasult` is composed by a simple boolean value
+- the `result` is composed by a simple boolean value
 - the `feedback` is composed by three flaot32 value represent the updated position of the robot (x, y and theta)
 ### Scripts folder
 
