@@ -42,8 +42,8 @@ roscore &
 ```
 ./coppeliasim.sh
 ```
-4. Now you can load the scene [coppeliascene.ttt](https://github.com/piquet8/rt2_assignment1/blob/main/coppeliascene.ttt) (Menu bar --> File --> Open Scene)
-6. Now we are ready, open a new terminal and launch
+4. Now you can load the scene [coppeliascene.ttt](https://github.com/piquet8/rt2_assignment1/blob/main/coppeliascene.ttt) ( menu bar --> File --> Open Scene )
+5. Now we are ready, open a new terminal and launch
 ```
 roslaunch rt2_assignment1 coppelia.launch 
 ```
