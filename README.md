@@ -31,7 +31,7 @@ In this branch we can also find the scene [coppeliascene.ttt](https://github.com
 - [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim.launch) launch file for starting the four nodes and the simulation 
 - [sim2.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim2.launch) Launch file for starting the same things of the [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim.launch) without the *state_machine.cpp* and the *position_service.cpp*. We used this launcher in the interaction between ROS and ROS2.
 - [coppelia.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/coppelia.launch) Launch file for starting the four nodes interacting with Vrep
-### URDF folder
+### Urdf folder
 Contains the robot description, [my_robot.udf](https://github.com/piquet8/rt2_assignment1/blob/main/urdf/my_robot.urdf) 
 ## How to run
 To launch the simulation, please:
