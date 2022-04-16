@@ -7,7 +7,11 @@ In this assignment, starting from the initial package which you can find in the 
 - [SimExtRos](https://github.com/CoppeliaRobotics/simExtROS2) is the ROS2 Interface plugin for CoppeliaSiam
 - [Coppeliasim](https://coppeliarobotics.com/downloads) is the simulator that allows to inregrate Vrep with ROS
     
-## Description of the main nodes
+## Description of the main branch
+### Launch folder
+- [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim.launch) launch file for starting the four nodes and the simulation 
+- [sim2.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim2.launch) Launch file for starting the same things of the [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/sim.launch) without the *state_machine.cpp* and the *position_service.cpp*. We used this launcher in the interaction between ROS and ROS2.
+- [coppelia.launch](https://github.com/piquet8/rt2_assignment1/blob/main/launch/coppelia.launch) Launch file for starting the four nodes interacting with Vrep
 ### Scripts folder
 - [user_interface.py](https://github.com/piquet8/rt2_assignment1/blob/main/scripts/user_interface.py) implents the user interface, if the user inserts '1' the robot starts to move instead inserting the value '0' the robot stop
 - [go_to_point.py](https://github.com/piquet8/rt2_assignment1/blob/main/scripts/go_to_point.py) implents a service to move and drive the robot among different target 
@@ -24,6 +28,7 @@ In this assignment, starting from the initial package which you can find in the 
 - [RandomPosition.srv](https://github.com/piquet8/rt2_assignment1/blob/main/srv/RandomPosition.srv) is composed by:
   -  as request min and max values of x and y
   -  as reply random target position (x,y and theta)
+ 
 
 
 The package contains the nodes and the simulation environment for controlling a mobile robot in the Gazebo simulation environment.
