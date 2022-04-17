@@ -17,23 +17,23 @@ We nedd to create a [mapping_rules.yaml](https://github.com/piquet8/rt2_assignme
 ## Rqt-graph
 ## How to launch
 To run the project, please follow these steps:
-1. Create three .sh files in your /root directory: the first one, ros.sh, should contain these lines:
+1. Create three .sh files in your /root directory: the first one, `ros.sh`, should contain these lines:
 ```
 #!/bin/bash
 source /root/my_ros/devel/setup.bash
 ```
-The second one, ros2.sh, should contain:
+The second one, `ros2.sh`, should contain:
 ```
 #!/bin/bash
 source /root/my_ros2/install/setup.bash
 ```
-The third one, ros12.sh, should contain:
+The third one, `ros12.sh`, should contain:
 ```
 #!/bin/bash
 source /root/my_ros/devel/setup.bash
 source /root/my_ros2/install/local_setup.bash
 ```
-2. Now the configuration should be ready, opena a new shell and run:
+2. Now the configuration should be ready, open a new shell and run:
 ```
 source ros.sh
 ```
@@ -49,7 +49,7 @@ source ros12.sh
 ```
   ros2 run ros1_bridge dynamic_bridge
 ```
-6. Finally in a a new terminal insert:
+6. Finally in a new terminal insert:
 ```
 source ros2.sh
 ```
