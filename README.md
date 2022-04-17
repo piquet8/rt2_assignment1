@@ -26,6 +26,8 @@ The srv are the same described previously, you can check the descripton in the [
 - [RandomPosition.srv](https://github.com/piquet8/rt2_assignment1/blob/action/srv/RandomPosition.srv)
 ### Launch folder
 - Here there is the [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/action/launch/sim.launch) that allows to starting the simulation
+## Rqt-graph
+## Documentation 
 ## How to run the code
 To launch the nodes and the simulation, open a terminal and please run:
 ```
