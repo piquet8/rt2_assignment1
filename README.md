@@ -27,7 +27,7 @@ The srv are the same described previously, you can check the descripton in the [
 ### Launch folder
 - Here there is the [sim.launch](https://github.com/piquet8/rt2_assignment1/blob/action/launch/sim.launch) that allows to starting the simulation
 ## Rqt-graph
-Here we can see a dynamic graph showing what's going on in the system:
+Here we can see a dynamic graph showing what's going on in the system, you can see more graphs [here](https://github.com/piquet8/rt2_assignment1/tree/action/rqt_graph):
 
 ![Rqt-graph](https://github.com/piquet8/rt2_assignment1/blob/action/rqt_graph/rqt2.jpeg)
 ## Documentation 
