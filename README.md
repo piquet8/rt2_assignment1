@@ -31,7 +31,7 @@ Here we can see a dynamic graph showing what's going on in the system, you can s
 
 ![Rqt-graph](https://github.com/piquet8/rt2_assignment1/blob/action/rqt_graph/rqt2.jpeg)
 ## Documentation 
-Here you can find the documentation about the code
+[Here](https://github.com/piquet8/rt2_assignment1/tree/doxygen/docs) you can find the documentation about the code
 ## How to run the code
 To launch the nodes and the simulation, open a terminal and please run:
 ```
