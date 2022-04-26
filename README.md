@@ -5,8 +5,10 @@
 - `ros1_bridge` ([info])(https://github.com/ros2/ros1_bridge)) in a ros12 workspace (in thr `/root` folder, source ros12.sh)
 ## Description of the branch
 ### Src folder
-- [position_service.cpp](https://github.com/piquet8/rt2_assignment1/blob/ros2/src/position_service.cpp)
-- [state_machine.cpp](https://github.com/piquet8/rt2_assignment1/blob/ros2/src/state_machine.cpp)
+- [position_service.cpp](https://github.com/piquet8/rt2_assignment1/blob/ros2/src/position_service.cpp): it contains the position server. It's designed to be compatible with `ROS2`, as components, so by using the `ros1_bridge`, they can be interface with the ros nodes and the simulation in Gazebo. The `go_to_point` has been implemented as a service. I have also created and implemented: 
+  - a launch file to start the container manager and the components
+  - a script to launch all required nodes and the simulation
+- [state_machine.cpp](https://github.com/piquet8/rt2_assignment1/blob/ros2/src/state_machine.cpp): it contains the Robot FSM
 ### Srv folder 
 The srv are the same described previously, you can check the descripton in the [main branch](https://github.com/piquet8/rt2_assignment1) 
 - [Command.srv](https://github.com/piquet8/rt2_assignment1/blob/action/srv/Command.srv)
