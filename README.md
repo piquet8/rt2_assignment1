@@ -3,3 +3,8 @@
 Here it is possible to find the `Doxygen documentation` of the "action" nodes by inspecting the folder [docs](https://github.com/piquet8/rt2_assignment1/tree/doxygen/docs) and opening the *index.html* file
 
 ( Instead you can see the `Sphinx documentation` of the "action" nodes [here](https://github.com/piquet8/rt2_assignment1/tree/sphinx/docs) )
+
+## Jupyter-Notebook
+The Jupyter Notebook is an open source web application that you can use to create and share 
+documents that contain live code, equations, visualizations, and text. In this assignment we used it to control the robot in different ways and to represent data about the robot and its movement in different graphs. 
+- Here you can find my [jupyter notebook](https://github.com/piquet8/rt2_assignment1/blob/doxygen/jupyter_notebook/rt2_assignment1.ipynb)
