@@ -16,7 +16,8 @@ The srv are the same described previously, you can check the descripton in the [
 - [RandomPosition.srv](https://github.com/piquet8/rt2_assignment1/blob/action/srv/RandomPosition.srv)
 ### Mapping rules
 We nedd to create a [mapping_rules.yaml](https://github.com/piquet8/rt2_assignment1/blob/ros2/mapping_rules.yaml) file in in the ros2 package for compiling the bridge 
-## Rqt-graph
+## Launch folder
+[ros2_launch.py](https://github.com/piquet8/rt2_assignment1/blob/ros2/launch/ros2_launch.py) this node allow us to launch the **container manager** where all the *composable nodes* are contained
 ## How to launch
 To run the project, please follow these steps:
 1. Create three .sh files in your /root directory: the first one, `ros.sh`, should contain these lines:
